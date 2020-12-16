@@ -27,16 +27,16 @@ export default function Carousel(props) {
 
     const nextSlide = () => {
         if (state.length > 1) {
-            document.querySelectorAll('img')[state.active].classList.remove
+            document.querySelectorAll('.slide')[state.active].classList.remove
                 ('active-slide');
             document.querySelectorAll('.tracker')[state.active].classList.remove('active-tracker');
             if (state.active === (state.length - 1)) {
-                document.querySelectorAll('img')[0].classList.add('active-slide');
+                document.querySelectorAll('.slide')[0].classList.add('active-slide');
                 setState({ ...state, active: 0 });
                 document.querySelectorAll('.tracker')[0].classList.add('active-tracker');
             }
             else {
-                document.querySelectorAll('img')[state.active + 1].classList.add('active-slide');
+                document.querySelectorAll('.slide')[state.active + 1].classList.add('active-slide');
                 setState({ ...state, active: state.active + 1 });
                 document.querySelectorAll('.tracker')[state.active + 1].classList.add('active-tracker');
             }
@@ -47,11 +47,11 @@ export default function Carousel(props) {
     const selectSlide = index => {
         if (imgList.length > 1) {
             clearTimeout(timer);
-            document.querySelectorAll('img')[state.active].classList.remove
+            document.querySelectorAll('.slide')[state.active].classList.remove
                 ('active-slide');
             document.querySelectorAll('.tracker')[state.active].classList.remove('active-tracker');
 
-            document.querySelectorAll('img')[index].classList.add('active-slide');
+            document.querySelectorAll('.slide')[index].classList.add('active-slide');
             document.querySelectorAll('.tracker')[index].classList.add('active-tracker');
             setState({ ...state, active: index });
         }

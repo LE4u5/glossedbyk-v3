@@ -1,0 +1,57 @@
+*{
+    text-decoration: none;
+}
+.nav-link :visited{
+    color:none;
+}
+.nav-link :link{
+    color:none;
+}
+.nav-link{
+    margin: 0em 1em;
+    color: white;
+}
+.nav-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: calc(100vw - 280px);
+    min-width: calc(100vw - 280px);
+    height: 30px;
+    display: flex;
+    padding: 30px 140px;
+    align-items: center;
+    z-index: 10;
+}
+.item-cont-left{
+    height: 30px;
+    width: calc((100vw - 280px) / 2);
+}
+.item-cont-right{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 30px;
+    width: calc((100vw - 280px) / 2);
+}
+.gbk-logo{
+    height: 30px;
+}
+.logo-cont{
+    position: relative;
+    height: 30px;
+}
+.nav-link-list-cont{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 10.5pt;
+}
+.fa-shopping-bag{
+    color: white;
+    margin-left: .75em;
+}
+.dark{
+    color: #535353 !important;
+}
