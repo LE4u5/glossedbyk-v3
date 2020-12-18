@@ -1,0 +1,23 @@
+.footer-cont{
+    min-height: 100px;
+    width: calc(100vw - 8em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A3939;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2em 4em;
+}
+.ft-left-cont{
+    width: calc(33.3333vw - 2.666666666666667em);
+    min-height: 100px;
+}
+.ft-middle-cont{
+    width: calc(33.3333vw - 2.666666666666667em);
+    min-height: 100px;
+}
+.ft-right-cont{
+    width: calc(33.3333vw - 2.666666666666667em);
+    min-height: 100px;
+}

@@ -1,0 +1,37 @@
+.product-card-cont{
+    font-family: 'Montserrat', sans-serif;
+    width: 248px;
+    height: 357.3px;
+    
+    text-align: center;
+}
+.pc-img-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 248px;
+    height: 248px;
+    border-radius: 8px;
+    margin-bottom: 3.5em;
+    overflow: hidden;
+    transition: 600ms ease-in-out;
+}
+.pc-img-cont:hover{
+    transform: scale(110%);
+    transition: 600ms ease-in-out;
+    box-shadow: 0px 17px 23px -10px rgba(0,0,0,.3);;
+}
+.pc-img{
+    width: 248px;
+    height: 248px;
+}
+.pc-text-cont{
+    text-align: left;
+    width: 248px;
+}
+.pc-disable{
+    display: none;
+}
+.pc-link, .pc-link:visited, .pc-link:link{
+    color: black;
+}
