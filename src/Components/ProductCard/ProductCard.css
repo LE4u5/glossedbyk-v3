@@ -1,9 +1,11 @@
 .product-card-cont{
+    position: relative;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     width: 248px;
     height: 357.3px;
-    
     text-align: center;
+    margin: 0;
 }
 .pc-img-cont{
     display: flex;
@@ -15,6 +17,12 @@
     margin-bottom: 3.5em;
     overflow: hidden;
     transition: 600ms ease-in-out;
+}
+.pc-img-cont .fa-tag{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color:rgb(255, 0, 0);
 }
 .pc-img-cont:hover{
     transform: scale(110%);
@@ -29,9 +37,22 @@
     text-align: left;
     width: 248px;
 }
+.pc-price-cont{
+    margin-top:1em;
+    width: 248px;
+    display: flex;
+}
+.pc-text-sale{
+    color: rgb(255, 0, 0);
+    margin-left: 1em;
+}
 .pc-disable{
-    display: none;
+    display: none !important;
 }
 .pc-link, .pc-link:visited, .pc-link:link{
     color: black;
+}
+strike{
+    text-decoration-thickness: 3px;
+    text-decoration-color:rgb(255, 0, 0);
 }

@@ -1,4 +1,4 @@
-*{
+a{
     text-decoration: none;
 }
 .nav-link :visited{
@@ -15,9 +15,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    max-width: calc(100vw - 280px);
-    min-width: calc(100vw - 280px);
-    height: 30px;
+    width: 100vw;
+    
+    height: 90px;
     display: flex;
     padding: 30px 140px;
     align-items: center;

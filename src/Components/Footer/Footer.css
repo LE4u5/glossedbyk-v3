@@ -1,10 +1,10 @@
 .footer-cont{
     min-height: 100px;
-    width: calc(100vw - 8em);
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3A3939;
+    background-color: #252525;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 2em 4em;
@@ -20,4 +20,81 @@
 .ft-right-cont{
     width: calc(33.3333vw - 2.666666666666667em);
     min-height: 100px;
+}
+.ft-link-list-cont {
+    font-size: 10pt;
+    display: flex;
+    color: white;
+    margin: 2em 0;
+}
+.ft-link-list-cont a{
+    color: white;
+    padding-right: 1em;
+}
+.ft-social-header{
+    font-size: 14pt;
+}
+.ft-social-cont .fab{
+    color: #252525;
+}
+.ft-social-cont .insta-cont{
+    display: flex;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+.contact-cont{
+    overflow: hidden;
+}
+.contact-cont form{
+    display: inline-flexbox;
+}
+.contact-cont label{
+    font-size: 8pt;
+    margin-left: 8px;
+}
+.contact-header{
+    font-size: 14pt;
+    margin-left: 8px;
+}
+.ct-info-cont{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.ct-info-cont div{
+    display: block;
+    width: calc((33.3333vw - 2.666666666666667em) / 2);
+}
+#name{
+    width: calc(((33.3333vw - 2.666666666666667em) / 2 ) -  16px);
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    padding: 0 16px;
+}
+#email{
+    width: calc(((33.3333vw - 2.666666666666667em) / 2 ) -  16px);
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    padding: 0 16px;
+}
+
+#message{
+    width: calc((33.3333vw - 2.666666666666667em) - 16px);
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    height: 100px;
+    padding: 16px;
+}
+.contact-cont input, .contact-cont textarea{
+    background-color: rgba(255,255,255,.05);
+    color: white;
 }

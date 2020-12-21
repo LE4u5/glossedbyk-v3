@@ -1,13 +1,13 @@
 .carousel-cont{
     position: relative;
-    max-width: 100vw;
+    width: 100vw;
     height: calc(100vw / 1.777777777777778 );
     overflow: hidden;
     background-color: black;
 }
 .slide{
     position: absolute;
-    max-width: 100vw;
+    width: 100vw;
     z-index: 1;
     top: 0;
     right: -100vw;
