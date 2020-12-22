@@ -1,7 +1,7 @@
 .product-card-cont{
     position: relative;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     width: 248px;
     height: 357.3px;
     text-align: center;
@@ -38,7 +38,7 @@
     width: 248px;
 }
 .pc-price-cont{
-    margin-top:1em;
+    margin-top:1.5em;
     width: 248px;
     display: flex;
 }
@@ -55,4 +55,7 @@
 strike{
     text-decoration-thickness: 3px;
     text-decoration-color:rgb(255, 0, 0);
+}
+.pc-text-name{
+    max-height: 20px;
 }

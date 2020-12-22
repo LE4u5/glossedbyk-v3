@@ -7,11 +7,12 @@ import ProductCard from '../Components/ProductCard/ProductCard';
 
 export default function Home() {
     // useEffect(()=> NavDark(), []);
-    const featured = ['','','',''].map(a => <ProductCard image='./assets/img/products/Baby.jpeg'
-    name='Baby'
-    price='8.00'
-    salePrice='6.00'
-    link={`/store/Baby`} />)
+    const featured = products.map(a => <ProductCard image={a.image}
+    name={a.name}
+    price={a.price.toFixed(2)}
+    salePrice={a.salePrice.toFixed(2)}
+    sale={a.sale}
+    link={`/store/${a.name}`} />)
 
     return (
         <div className='home-cont'>
@@ -58,3 +59,34 @@ function CatagoryCard(props) {
         </div>
     );
 }
+
+const products = [
+    {
+        name: 'Rose and Lavender Spray',
+        price: 6.99,
+        sale: false,
+        salePrice: 0,
+        image: './assets/img/products/Rose and Lavender Spray1x1.jpg'
+    },
+    {
+        name: 'Mini Hand Sanitizer',
+        price: 3.50,
+        sale: false,
+        salePrice: 6.00,
+        image: './assets/img/products/MiniHandSanitizers1x1.jpg'
+    },
+    {
+        name: 'Whipped Face & Body Butter',
+        price: 7.99,
+        sale: true,
+        salePrice: 6.00,
+        image: './assets/img/products/WhippedFaceandBodyButter1x1.jpg'
+    },
+    {
+        name: 'Vanilla Rose Face & Body Scrub',
+        price: 6.99,
+        sale: false,
+        salePrice: 0,
+        image: './assets/img/products/VanillaRoseFace&BodyScrub1x1.jpg'
+    }
+];
