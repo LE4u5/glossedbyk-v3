@@ -17,7 +17,7 @@ export default function NavBar() {
                     <NavLink className='nav-link' to='/store'>Store</NavLink>
                 </div>
                 <div className='nav-cart-cont'>
-                    <i class="fas fa-shopping-bag"></i>
+                    <i className="fas fa-shopping-bag"></i>
                 </div>
             </div>
         </div>

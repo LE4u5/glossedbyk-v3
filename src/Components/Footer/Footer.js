@@ -16,7 +16,7 @@ export default function Footer() {
                     <h1 className='ft-social-header'>Follow Us</h1>
                     <a href='https://www.instagram.com/glossed_byk/'>
                         <div className='insta-cont'>
-                            <i class="fab fa-instagram fa-lg"></i>
+                            <i className="fab fa-instagram fa-lg"></i>
                         </div>
                     </a>
                 </div>

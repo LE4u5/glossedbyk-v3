@@ -10,7 +10,7 @@ export default function ProductCard(props) {
             <Link className='pc-link' to={props.link}>
                 <div className='pc-img-cont'>
                     <img className='pc-img' src={props.image} alt={props.name} />
-                    <i class={`fas fa-tag fa-2x ${display}`} ></i>
+                    <i className={`fas fa-tag fa-2x ${display}`} ></i>
                 </div>
                 <div className='pc-text-cont'>
                     <p className='pc-text-name'> {props.name} </p>
