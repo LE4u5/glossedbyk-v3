@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './CarouselComponent.css'
 
 export default function Carousel(props) {
-    let timer = '';
+    const timer = useRef(0);
     
     const [state, setState] = useState({ length: 1, active: 0, timer: 0 });
 
@@ -46,7 +46,7 @@ export default function Carousel(props) {
 
     const selectSlide = index => {
         if (imgList.length > 1) {
-            clearTimeout(timer);
+            clearTimeout(timer.current);
             document.querySelectorAll('.slide')[state.active].classList.remove
                 ('active-slide');
             document.querySelectorAll('.tracker')[state.active].classList.remove('active-tracker');
@@ -57,7 +57,7 @@ export default function Carousel(props) {
         }
     }
 
-    useEffect(() => timer = setTimeout(nextSlide, 5000),);
+    useEffect(() => timer.current = setTimeout(nextSlide, 5000),);
 
     return (
         <React.Fragment>

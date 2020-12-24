@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBarComponent.css'
 
@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className='nav-cont'>
             <div className='item-cont-left'>
                 <div className='logo-cont' >
-                    <img className='gbk-logo' src='./assets/svg/logo.svg' />
+                    <img className='gbk-logo' src='./assets/svg/logo.svg' alt='GlossedByK' />
                 </div>
             </div>
             <div className='item-cont-right'>
@@ -30,5 +30,13 @@ export function NavDark(){
     const navLinks = document.querySelectorAll('.nav-link');
     for(var i=navLinks.length; i > 0; i--){
         navLinks[i-1].classList.add('dark');
+    }
+}
+export function NavLight(){
+    document.querySelector('.gbk-logo').setAttribute('src', './assets/svg/logo.svg');
+    document.querySelector('.fa-shopping-bag').classList.remove('dark');
+    const navLinks = document.querySelectorAll('.nav-link');
+    for(var i=navLinks.length; i > 0; i--){
+        navLinks[i-1].classList.remove('dark');
     }
 }

@@ -12,4 +12,12 @@ body{
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  
+}
+html{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar{
+  display: none;
 }

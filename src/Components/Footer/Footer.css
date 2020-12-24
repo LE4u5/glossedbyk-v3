@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #252525;
+    background-color: #1b1b1b;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 2em 4em;
@@ -35,7 +35,7 @@
     font-size: 14pt;
 }
 .ft-social-cont .fab{
-    color: #252525;
+    color: #1b1b1b;
 }
 .ft-social-cont .insta-cont{
     display: flex;

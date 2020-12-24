@@ -78,8 +78,10 @@
     margin: 1rem;
 }
 .cat-card-cont:hover .cat-img{
-    transform: scale(120%);
+    transform: scale(1.2);
     transition: 3s ease-in-out;
+    -webkit-transform: scale(1.2);
+    -webkit-transition: 3s ease-in-out;
 }
 .cat-img{
     position: absolute;
@@ -88,6 +90,7 @@
     width: 100%;
     z-index: 0;
     transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
 }
 .cat-title{
     font-family: 'Cormorant', serif;

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import Carousel from '../Components/Carousel (FP)/CarouselComponent';
-import { NavDark } from '../Components/NavBar/NavBarComponent';
+import React, {  } from 'react';
+import Carousel from '../../Components/Carousel (FP)/CarouselComponent';
+//import { NavDark } from '../../Components/NavBar/NavBarComponent';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import ProductCard from '../Components/ProductCard/ProductCard';
+import ProductCard from '../../Components/ProductCard/ProductCard';
 
 export default function Home() {
     // useEffect(()=> NavDark(), []);
@@ -12,7 +12,8 @@ export default function Home() {
     price={a.price.toFixed(2)}
     salePrice={a.salePrice.toFixed(2)}
     sale={a.sale}
-    link={`/store/${a.name}`} />)
+    key={a.id}
+    link={`/store/${a.name.replace(/ /g, '_')}`} />)
 
     return (
         <div className='home-cont'>
@@ -53,7 +54,7 @@ function CatagoryCard(props) {
             <div className='cat-title-cont'>
                 <h1 className='cat-title'> {props.cat} </h1>
             </div>
-            <Link to={`/store/${props.cat.replace(' ', '_')}`}>
+            <Link to={`/store/${props.cat.replace(/ /g, '_')}`}>
                 <button className='cat-btn' type='button'> Shop </button>
             </Link>
         </div>
@@ -62,6 +63,7 @@ function CatagoryCard(props) {
 
 const products = [
     {
+        id: 0,
         name: 'Rose and Lavender Spray',
         price: 6.99,
         sale: false,
@@ -69,6 +71,7 @@ const products = [
         image: './assets/img/products/Rose and Lavender Spray1x1.jpg'
     },
     {
+        id: 1,
         name: 'Mini Hand Sanitizer',
         price: 3.50,
         sale: false,
@@ -76,6 +79,7 @@ const products = [
         image: './assets/img/products/MiniHandSanitizers1x1.jpg'
     },
     {
+        id: 2,
         name: 'Whipped Face & Body Butter',
         price: 7.99,
         sale: true,
@@ -83,6 +87,7 @@ const products = [
         image: './assets/img/products/WhippedFaceandBodyButter1x1.jpg'
     },
     {
+        id: 3,
         name: 'Vanilla Rose Face & Body Scrub',
         price: 6.99,
         sale: false,
