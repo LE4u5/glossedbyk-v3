@@ -18,23 +18,27 @@ a{
     width: 100vw;
     height: 90px;
     display: flex;
-    padding: 30px 140px;
+    padding: 30px 100px;
     align-items: center;
     z-index: 10;
+    transition: 600ms ease-in-out;
+    -webkit-transition: 600ms ease-in-out;
 }
 .nav-cont.active{
     background-color: rgba(1, 1, 1, .3);
+    transition: 600ms ease-in-out;
+    -webkit-transition: 600ms ease-in-out;
 }
 .item-cont-left{
     height: 30px;
-    width: calc((100vw - 280px) / 2);
+    width: calc((100vw - 20px) / 2);
 }
 .item-cont-right{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 30px;
-    width: calc((100vw - 280px) / 2);
+    width: calc((100vw - 20px) / 2);
 }
 .gbk-logo{
     height: 30px;

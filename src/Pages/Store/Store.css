@@ -1,0 +1,27 @@
+.store-cont{
+    font-family: 'Cormorant', serif;
+    background-color: #FEF2F5;
+    padding: 150px 150px;
+    width: 100vw;
+    min-height: 1080px;
+}
+
+.store-header{
+    color: #B7884C;
+    font-weight: 200;
+    font-size: 48pt;
+    margin-bottom: 2em;
+}
+.store-row-cont{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 6em;
+}
+.store-prod-cont{
+    margin: auto;
+    justify-content: center;
+}
+.filler-card{
+    width: 248px;
+    margin: auto;
+}

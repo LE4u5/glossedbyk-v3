@@ -1,19 +1,63 @@
-import React, {  } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Carousel from '../../Components/Carousel (FP)/CarouselComponent';
-//import { NavDark } from '../../Components/NavBar/NavBarComponent';
+import { NavLight } from '../../Components/NavBar/NavBarComponent';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 
 export default function Home() {
-    // useEffect(()=> NavDark(), []);
+    const [navBar, setNavBar] = useState(false);
+    const toggleNav = useCallback(() => {
+        if (!navBar && (window.scrollY >= 100)) {
+            if (document.querySelector('.nav-cont')) {
+                document.querySelector('.nav-cont').setAttribute('class', 'nav-cont active');
+            }
+            setNavBar(true);
+            window.removeEventListener('scroll', toggleNav, false);
+        }
+        else if (navBar && (window.scrollY < 100)) {
+            if (document.querySelector('.nav-cont')) {
+                document.querySelector('.nav-cont').setAttribute('class', 'nav-cont');
+            }
+            setNavBar(false);
+            window.removeEventListener('scroll', toggleNav, false);
+        }
+    }, [navBar, setNavBar])
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleNav, false);
+
+        return () => {
+            window.removeEventListener('scroll', toggleNav, false);
+
+        }
+    }, [toggleNav]);
+
     const featured = products.map(a => <ProductCard image={a.image}
-    name={a.name}
-    price={a.price.toFixed(2)}
-    salePrice={a.salePrice.toFixed(2)}
-    sale={a.sale}
-    key={a.id}
-    link={`/store/${a.name.replace(/ /g, '_')}`} />)
+        name={a.name}
+        price={a.price.toFixed(2)}
+        salePrice={a.salePrice.toFixed(2)}
+        sale={a.sale}
+        key={a.id}
+        link={`/store/${a.name.replace(/ /g, '_')}`} />)
+
+    useEffect(() => {
+        NavLight();
+        if (document.querySelector('.lip-gloss-svg')) {
+            document.querySelector('.lip-gloss-svg').setAttribute('class', 'lip-gloss-svg text-svg activate');
+        }
+        if (document.querySelector('.beauty-svg')) {
+            document.querySelector('.beauty-svg').setAttribute('class', 'beauty-svg text-svg activate');
+        }
+        if (document.querySelector('.skin-care-svg')) {
+            document.querySelector('.skin-care-svg').setAttribute('class', 'skin-care-svg text-svg activate');
+        }
+        return () => {
+            if (document.querySelector('.nav-cont')) {
+                document.querySelector('.nav-cont').setAttribute('class', 'nav-cont');
+            }
+        }
+    }, [])
 
     return (
         <div className='home-cont'>

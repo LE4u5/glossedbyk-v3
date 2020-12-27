@@ -128,3 +128,40 @@
     opacity: .3;
     z-index: 1;
 }
+.lip-gloss-svg{
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    opacity: 0;
+}
+.beauty-svg{
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    opacity: 0;
+}
+.skin-care-svg{
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    opacity: 0;
+}
+
+.lip-gloss-svg.activate{
+    opacity: .7;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    transition: .8s 300ms ease-in-out;
+    -webkit-transition: .8s 300ms ease-in-out;
+}
+.beauty-svg.activate{
+    opacity: .7;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    transition: .8s 600ms ease-in-out;
+    -webkit-transition: .8s 600ms ease-in-out;
+}
+.skin-care-svg.activate{
+    opacity: .7;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    transition: .8s 900ms ease-in-out;
+    -webkit-transition: .8s 900ms ease-in-out;
+}
