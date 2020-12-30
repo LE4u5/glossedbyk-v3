@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-440.443,-192.605)">
+        <g id="Up--Chevron" serif:id="Up  Chevron" transform="matrix(1,0,0,1,-107.054,5.80913)">
+            <path d="M657.871,407.543C596.954,407.543 547.497,358.086 547.497,297.169C547.497,236.253 596.954,186.796 657.871,186.796C718.788,186.796 768.244,236.253 768.244,297.169C768.244,358.086 718.788,407.543 657.871,407.543ZM658.202,288.676L607.518,339.162C603.786,342.879 597.738,342.867 594.021,339.135L580.551,325.612C576.834,321.88 576.846,315.833 580.577,312.115L651.112,241.203C654.829,237.472 660.877,237.46 664.609,241.177L735.164,311.456C738.896,315.173 738.908,321.221 735.191,324.952L721.721,338.475C718.003,342.207 711.956,342.219 708.224,338.502L658.202,288.676Z" style="fill:rgb(37,37,37);"/>
+        </g>
+    </g>
+</svg>

@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className='nav-cont'>
             <div className='item-cont-left'>
                 <div className='logo-cont' >
-                    <img className='gbk-logo' src='./assets/svg/logo.svg' alt='GlossedByK' />
+                    <img className='gbk-logo' src='/assets/svg/logo.svg' alt='GlossedByK' />
                 </div>
             </div>
             <div className='item-cont-right'>
@@ -25,7 +25,7 @@ export default function NavBar() {
 }
 
 export function NavDark(){
-    document.querySelector('.gbk-logo').setAttribute('src', './assets/svg/logo2.svg');
+    document.querySelector('.gbk-logo').setAttribute('src', '/assets/svg/logo2.svg');
     document.querySelector('.fa-shopping-bag').classList.add('dark');
     const navLinks = document.querySelectorAll('.nav-link');
     for(var i=navLinks.length; i > 0; i--){
@@ -33,7 +33,7 @@ export function NavDark(){
     }
 }
 export function NavLight(){
-    document.querySelector('.gbk-logo').setAttribute('src', './assets/svg/logo.svg');
+    document.querySelector('.gbk-logo').setAttribute('src', '/assets/svg/logo.svg');
     document.querySelector('.fa-shopping-bag').classList.remove('dark');
     const navLinks = document.querySelectorAll('.nav-link');
     for(var i=navLinks.length; i > 0; i--){

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-158.286,-195.095)">
+        <g id="Down-Chevron" serif:id="Down Chevron" transform="matrix(1,0,0,1,-103.734,28.2158)">
+            <path d="M372.394,166.879C433.31,166.879 482.767,216.336 482.767,277.252C482.767,338.169 433.31,387.626 372.394,387.626C311.477,387.626 262.02,338.169 262.02,277.252C262.02,216.336 311.477,166.879 372.394,166.879ZM372.062,285.746L422.747,235.26C426.479,231.543 432.526,231.555 436.243,235.286L449.714,248.809C453.431,252.541 453.419,258.589 449.687,262.306L379.152,333.218C375.435,336.95 369.387,336.962 365.656,333.245L295.1,262.966C291.368,259.249 291.357,253.201 295.074,249.469L308.544,235.946C312.261,232.214 318.309,232.202 322.04,235.92L372.062,285.746Z" style="fill:rgb(37,37,37);"/>
+        </g>
+    </g>
+</svg>

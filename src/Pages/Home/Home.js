@@ -39,7 +39,7 @@ export default function Home() {
         salePrice={a.salePrice.toFixed(2)}
         sale={a.sale}
         key={a.id}
-        link={`/store/${a.name.replace(/ /g, '_')}`} />)
+        link={`/store/products/${a.name.replace(/ /g, '_')}`} />)
 
     useEffect(() => {
         NavLight();
@@ -66,7 +66,7 @@ export default function Home() {
                 <img className='lip-gloss-svg text-svg' src='./assets/svg/Lip_Gloss.svg' alt='Lip Gloss' />
                 <img className='beauty-svg text-svg' src='./assets/svg/beauty.svg' alt="Beauty" />
                 <img className='skin-care-svg text-svg' src='./assets/svg/Skin_Care.svg' alt='Skin Care' />
-                <Link to='/'><button className='home-overlay-button' type='button' >Shop Now</button></Link>
+                <Link to='/store'><button className='home-overlay-button' type='button' >Shop Now</button></Link>
             </div>
             <div className='featured-list'>
                 <h1 className='featured-header'>Featured</h1>

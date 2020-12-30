@@ -13,11 +13,11 @@ export default function Store() {
             let newArray = PRODUCTS.slice(i * rowSize, ((i + 1) * rowSize));
             newArray = newArray.map(pv => {
                 return <ProductCard name={pv.name}
-                    price={pv.price}
+                    price={pv.price.toFixed(2)}
                     sale={pv.sale}
                     key={pv.id}
-                    salePrice={pv.sale_price}
-                    link={`/store/${pv.name.replace(/ /g, '_')}`}
+                    salePrice={pv.sale_price.toFixed(2)}
+                    link={`/store/products/${pv.name.replace(/ /g, '_')}`}
                     image={pv.image} />
             });
             if (newArray.length < rowSize) {

@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBarComponent';
 import React, { useState, useEffect, useCallback } from 'react';
 import SmoothScroll from 'smooth-scroll';
+import Product from './Pages/Product/Product';
 
 function App() {
   
@@ -43,6 +44,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
+        <Route exact path='/store/products/:SelectedItem' component={Product} />
         <Route path='/store'>
           <Store />
         </Route>
