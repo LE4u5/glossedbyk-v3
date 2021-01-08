@@ -5,48 +5,100 @@ import { NavDark } from '../../Components/NavBar/NavBarComponent';
 
 export default function Product(props) {
     useEffect(() => { NavDark() }, []);
-    const [optionList, setOptionList] = useState([]);
-    const [imageListph, setImageList] = useState([]);
-    const name = props.match.params.SelectedItem.replace(/_/g, ' ')
-    const product = PRODUCTS.filter(a => a.name === name)[0];
-    let imageList = product.image.map((a, i) => {
-        return <img src={a} key={i + 100} alt={i} />
-    });
-    useEffect(()=> {
-        document.querySelector('.product-selected-option').innerHTML = product.options[0]
-    },[product])
-    const selectOption = useCallback((newOption) => {
-        document.querySelector('.product-selected-option').innerHTML = newOption;
-    }, []);
+    const [name] = useState(props.match.params.SelectedItem.replace(/_/g, ' '));
+    const [optionList, setOptionList] = useState({ list: [], visible: false, selectedOption: '' });
+    const [productData, setProductData] = useState({ price: 0, image: '', qty: 1 });
 
     useEffect(() => {
-        if (product.options) {
-            setOptionList(product.options.map((option, index) => {
-                return <p className='product-option-list-item' onClick={() => selectOption(option)} key={index}>{option}</p>
-            }))
+        setProductData(o => {
+            return {
+                ...o,
+                ...PRODUCTS.filter(a => a.name === name)[0], image: PRODUCTS.filter(a => a.name === name)[0].image.map((a, i) => {
+                    return <img src={a} key={i + 100} alt={i} />
+                })
+            };
+        })
+    }, [setProductData, name]);
+    useEffect(() => {
+        if (document.querySelector('.product-selected-option'))
+            document.querySelector('.product-selected-option').innerHTML = 'Select One'
+    }, [])
+    const selectOption = useCallback((newOption) => {
+        if (document.querySelector('.product-selected-option')) {
+            document.querySelector('.product-selected-option').innerHTML = newOption;
+            setOptionList(o => { return { ...o, selectedOption: newOption } })
         }
-    }, [setOptionList, selectOption, product.options]);
+    }, []);
+    console.log(optionList.selectedOption)
 
-    imageList.push(<img src={product.image[0]} key={103} alt={product.name} />);
+    useEffect(() => {
+        if (productData.options) {
+            setOptionList(o => {
+                return {
+                    ...o, list: productData.options.map((option, index) => {
+                        return <p className='product-option-list-item' onClick={() => selectOption(option)} key={index}>{option}</p>
+                    })
+                }
+            })
+        }
+    }, [setOptionList, selectOption, productData.options]);
 
-    console.log(product.image);
-    console.log(imageList);
+    const toggleOptionList = () => {
+        const optionListCont = document.querySelector('.product-option-list-cont');
+        if (optionList.visible === false) {
+            optionListCont.classList.add('active');
+        } else if (optionList.visible === true) {
+            optionListCont.classList.remove('active');
+        }
+        setOptionList(o => { return { ...o, visible: !o.visible } });
+    }
+
+    const incrementQty = () => {
+        setProductData({ ...productData, qty: productData.qty + 1 })
+        console.log('incrementing: ', productData.qty + 1)
+    }
+    const decrementQty = () => {
+        setProductData({ ...productData, qty: productData.qty - 1 })
+        console.log('incrementing: ', productData.qty - 1)
+    }
+
+    console.log(productData.image);
+    console.log(optionList.list);
     return (
         <div className='product-cont' >
 
             <div className='product-image-cont'>
-                {imageList}
+                {productData.image}
             </div>
             <div className='product-info-cont'>
                 <h1 className='product-header'> {name} </h1>
-                <div className='product-price-cont'>{product.sale ? <p className='product-salep-text'><strike>${product.price} </strike> ${product.sale_price.toFixed(2)} </p> : <p className='product-price-text'>${product.price.toFixed(2)} </p>}</div>
-                <div className='product-options-cont'><p>Options: </p><p className='product-selected-option'>Selected Option</p><img className='product-option-chev' src='/assets/svg/down_chev.svg' alt='v' />
-                    <div className='product-option-list-cont' >
-                        {optionList}
+                <div className='product-price-cont'>{productData.sale ? <p className='product-salep-text'><strike>${productData.price} </strike> ${productData.sale_price.toFixed(2)} </p> : <p className='product-price-text'>${productData.price.toFixed(2)} </p>}</div>
+                {optionList.list.length > 0 ? <div className='product-options-cont'>
+                    <p>Options: </p>
+                    <p className='product-selected-option'>Selected Option</p>
+                    <div className='product-option-chev-cont' onClick={() => toggleOptionList()}>
+                        <img className='product-option-chev dropdown' src='/assets/svg/down_chev.svg' alt='v' />
+                        <div className='product-option-list-cont' >
+                            {optionList.list}
+                        </div>
                     </div>
+                </div> : <div />}
+                <div className='product-qty-cont'>
+                    <p>Qty:</p>
+                    <p className='product-selected-qty'>{productData.qty}</p>
+                    <img className='product-option-chev up' src='/assets/svg/up_chev.svg' alt='v' onClick={() => { incrementQty() }} />
+                    <img className='product-option-chev down' src='/assets/svg/down_chev.svg' alt='v' onClick={() => { decrementQty() }} />
                 </div>
-
-                <button className='product-btn' type='button' >Add to Cart</button>
+                <div className='product-btn-cont'>
+                    <button className='product-btn' type='button' >Add to Cart</button>
+                </div>
+                <div className='product-desc-cont'>
+                    <p>Description: <span className='product-desc-span'> {productData.description}</span></p>
+                </div>
+                <div className='product-share-cont'>
+                    <p>Share:</p>
+                    <i className="fab fa-instagram fa-lg"></i>
+                </div>
             </div>
         </div>
     );

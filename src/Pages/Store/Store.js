@@ -18,7 +18,7 @@ export default function Store() {
                     key={pv.id}
                     salePrice={pv.sale_price.toFixed(2)}
                     link={`/store/products/${pv.name.replace(/ /g, '_')}`}
-                    image={pv.image} />
+                    image={pv.image[0]} />
             });
             if (newArray.length < rowSize) {
                 for (let a = (rowSize - newArray.length); a > 0; a--) {

@@ -37,7 +37,7 @@
 .product-info-cont{
     position: relative;
     width: 50vw;
-    padding-left: 5em;
+    padding: 0 5em;
 }
 .product-salep-text strike{
     margin-right: 1em;
@@ -46,6 +46,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 2em;
 }
 .product-selected-option{
     margin-left: 1em;
@@ -53,12 +54,17 @@
 .product-option-chev{
     cursor: pointer;
     height: 17px;
+    margin: 0 .2em
+}
+
+.product-option-chev.dropdown, .product-option-chev.up{
     margin-left: 1em;
 }
+
 .product-option-list-cont{
     position: absolute;
     top: 28px;
-    left: 85px;
+    left: 5px;
     background-color:#252525;
     color: white;
     min-width: 150px;
@@ -72,6 +78,12 @@
 .product-option-list-cont.active{
     display: block;
 }
+.product-option-chev-cont{
+    position: relative;
+}
+.product-option-list-cont.active{
+    display: block;
+}
 .product-option-list-item{
     padding-left: .5em;
     padding-right: 1em;
@@ -79,6 +91,12 @@
 }
 .product-option-list-item:hover{
     background-color:#B7884C;
+}
+.product-qty-cont{
+    display: flex;
+}
+.product-selected-qty{
+    margin-left: 1em;
 }
 .product-btn{
     font-family: 'Montserrat', sans-serif;
@@ -102,4 +120,24 @@
 }
 .product-btn:focus{
     outline: none;
+}
+.product-btn-cont{
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+}
+.product-desc-cont{
+    display: flex;
+    margin-top: 3em;
+}
+.product-desc-span{
+    margin-left: 1em;
+    font-size: 10pt;
+}
+.product-share-cont{
+    margin-top: 2em;
+}
+.product-share-cont i{
+    margin-top: 1em;
+    cursor: pointer;
 }
