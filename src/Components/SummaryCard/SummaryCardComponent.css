@@ -1,0 +1,53 @@
+.sc-cont{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 8px;
+    padding: .5em;
+    display: flex;
+}
+.content-cont{
+    margin: auto;
+    width: 100%;
+}
+.sc-btn-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+.sc-btn-cont Button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: .5em 3em;
+    background-color: #B7884C;
+    color: white;
+    margin-top: 5rem;
+}
+.sc-detail-cont{
+    width: 100%;
+}
+.sc-price-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: .5rem 0;
+}
+.sc-shipping-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: .5rem 0;
+}
+.sc-total-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: .5rem 0;
+}

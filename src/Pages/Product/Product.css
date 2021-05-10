@@ -26,6 +26,7 @@
     overflow-y: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
+    border-radius: 0 1em 0 0;
 }
 .product-image-cont::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */

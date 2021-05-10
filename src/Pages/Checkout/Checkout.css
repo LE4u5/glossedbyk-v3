@@ -1,0 +1,22 @@
+.checkout-cont{
+    font-family: 'Cormorant', serif;
+    background-color: #FEF2F5;
+    padding: 150px 150px;
+    width: 100vw;
+    min-height: 1080px;
+    display: flex;
+}
+
+.checkout-header{
+    color: #B7884C;
+    font-weight: 200;
+    font-size: 38pt;
+    margin-bottom: 2em;
+}
+
+.checkout-list-cont{
+    width: 50%;
+}
+.checkout-summary-cont{
+    width: 50%;
+}

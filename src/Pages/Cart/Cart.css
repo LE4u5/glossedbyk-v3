@@ -1,0 +1,14 @@
+.cart-cont{
+    font-family: 'Cormorant', serif;
+    background-color: #FEF2F5;
+    padding: 150px 150px;
+    width: 100vw;
+    min-height: 1080px;
+}
+
+.cart-header{
+    color: #B7884C;
+    font-weight: 200;
+    font-size: 48pt;
+    margin-bottom: 2em;
+}

@@ -8,6 +8,8 @@ import NavBar from './Components/NavBar/NavBarComponent';
 import React, { useState, useEffect, useCallback } from 'react';
 import SmoothScroll from 'smooth-scroll';
 import Product from './Pages/Product/Product';
+import Checkout from './Pages/Checkout/Checkout';
+import Cart from './Pages/Cart/Cart';
 
 function App() {
   
@@ -44,6 +46,12 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
+        <Route path='/cart'>
+          <Cart />
+        </Route>
+        <Route path='/checkout'>
+          <Checkout />
+        </Route>
         <Route exact path='/store/products/:SelectedItem' component={Product} />
         <Route path='/store'>
           <Store />
