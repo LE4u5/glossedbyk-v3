@@ -40,7 +40,7 @@
 .cart-card-col{
     width: 33%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     height: fit-content;
     padding-left: 6px;
 }

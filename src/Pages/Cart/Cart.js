@@ -3,7 +3,6 @@ import './Cart.css';
 import { NavDark } from '../../Components/NavBar/NavBarComponent';
 import CartCard from '../../Components/CartCard/CartCardComponent';
 import { SiteContext } from '../../data/SiteContext';
-import CartCardComponent from '../../Components/CartCard/CartCardComponent';
 import SummaryCard from '../../Components/SummaryCard/SummaryCardComponent';
 
 export default function Cart(props) {

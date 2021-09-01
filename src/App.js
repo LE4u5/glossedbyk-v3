@@ -14,7 +14,7 @@ import { SiteContext } from './data/SiteContext';
 import {fetchProducts} from './data/ActionCreators';
 
 function App() {
-  const [products,productsDispatch,,] = useContext(SiteContext);
+  const [,productsDispatch,,] = useContext(SiteContext);
   useEffect(() => { fetchProducts(productsDispatch);}, [productsDispatch]);
   
   new SmoothScroll('a[href*="#"]');

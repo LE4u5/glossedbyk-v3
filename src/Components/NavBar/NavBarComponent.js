@@ -12,7 +12,7 @@ export default function NavBar() {
                 setCartTotal(element.qty);
                 return;
             }
-            setCartTotal(cartTotal + element.qty);
+            setCartTotal(c => c+element.qty);
         });
         
     }

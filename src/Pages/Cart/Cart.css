@@ -23,5 +23,5 @@
 .cart-summary-cont{
     width: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }

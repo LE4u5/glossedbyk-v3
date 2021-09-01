@@ -5,7 +5,7 @@ export default function CartCardComponent(props) {
     console.log('card price: ', props.item.qty*props.item.price)
     return (
         <div className="cart-card-cont">
-            <img className='cart-card-img' src={props.item.image[0]} alt="Image" />
+            <img className='cart-card-img' src={props.item.image[0]} alt={props.item.name} />
             <div className='cart-card-info-cont'>
                 <div className='cart-card-row one '>
                     <div className='cart-card-col'>
