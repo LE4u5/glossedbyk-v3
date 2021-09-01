@@ -10,6 +10,7 @@ a{
 .nav-link{
     margin: 0em 1em;
     color: white;
+    display: flex;
 }
 .nav-cont{
     position: fixed;
@@ -58,11 +59,30 @@ a{
     color: white;
     margin-left: .75em;
 }
+.nav-link p{
+    margin-left: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
 .dark{
     color: #1b1b1b !important;
 }
 @media only screen and (max-width: 500px){
     .nav-cont{
+        display: block;
         position: relative;
+        background-color: #1b1b1b;
+        padding: 20px 6px;
+        color: white !important;
+    }
+    .item-cont-left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .item-cont-right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }

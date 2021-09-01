@@ -1,6 +1,6 @@
 import './Store.css';
 import React, { useEffect, useState, useCallback, useContext } from 'react';
-import { NavDark } from '../../Components/NavBar/NavBarComponent';
+import { NavDark, NavLight } from '../../Components/NavBar/NavBarComponent';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 //import { PRODUCTS } from '../../data/products';
 import { SiteContext } from '../../data/SiteContext';
@@ -59,9 +59,10 @@ export default function Store() {
             }
         } else setRowSize(1);
     }, [rowSize])
-
+    console.log(window.innerWidth)
     useEffect(() => {
-        NavDark();
+        if(window.innerWidth > 500) NavDark();
+        else NavLight();
         window.addEventListener('resize', calculateRowSize);
 
         return () => {

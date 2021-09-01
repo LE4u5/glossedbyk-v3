@@ -5,7 +5,7 @@ import { SiteContext } from '../../data/SiteContext';
 export default function NavBar() {
     const [, , cart,] = useContext(SiteContext);
     const [cartTotal, setCartTotal] = useState(() => 0);
-    
+
     const getCartTotal = () => {
         cart.cart.forEach((element, index) => {
             if (index === 0) {
@@ -32,7 +32,7 @@ export default function NavBar() {
                     <NavLink className='nav-link' to='/store'>Store</NavLink>
                 </div>
                 <div className='nav-cart-cont'>
-                    <NavLink className='nav-link' to='/cart'> <i className="fas fa-shopping-bag">{cartTotal}</i></NavLink>
+                    <NavLink className='nav-link' to='/cart'> <i className="fas fa-shopping-bag"></i><p>{cartTotal}</p></NavLink>
                 </div>
             </div>
         </div>
