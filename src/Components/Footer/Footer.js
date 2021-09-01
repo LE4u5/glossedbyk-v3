@@ -22,7 +22,6 @@ export default function Footer() {
                 </div>
             </div>
             <div className='ft-middle-cont'>
-
             </div>
             <div className='ft-right-cont'>
                 <ContactForm />
@@ -38,11 +37,11 @@ function ContactForm() {
             <form className='contact-form'>
                 <div className='ct-info-cont'>
 
-                    <div>
+                    <div className='ct-name'>
                         <label htmlFor='name'>Name</label>
                         <input type='text' name='name' id='name'></input>
                     </div>
-                    <div>
+                    <div className='ct-email'>
                         <label htmlFor='email'>Email</label>
                         <input type='email' name='email' id='email'></input>
                     </div>
