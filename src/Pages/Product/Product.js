@@ -1,10 +1,14 @@
 import './Product.css';
-import React, { useEffect, useState, useCallback } from 'react';
-import { PRODUCTS } from '../../Data/products';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
+//import { PRODUCTS } from '../../data/products';
 import { NavDark } from '../../Components/NavBar/NavBarComponent';
+import { SiteContext } from '../../data/SiteContext';
+import { addToCart } from '../../data/ActionCreators';
 
 export default function Product(props) {
     useEffect(() => { NavDark() }, []);
+    const [products, , cart, cartDispatch] = useContext(SiteContext);
+    const PRODUCTS = products.products;
     const [name] = useState(props.match.params.SelectedItem.replace(/_/g, ' '));
     const [optionList, setOptionList] = useState({ list: [], visible: false, selectedOption: '' });
     const [productData, setProductData] = useState({ price: 0, image: '', qty: 1 });
@@ -18,7 +22,7 @@ export default function Product(props) {
                 })
             };
         })
-    }, [setProductData, name]);
+    }, [setProductData, name, PRODUCTS]);
     useEffect(() => {
         if (document.querySelector('.product-selected-option'))
             document.querySelector('.product-selected-option').innerHTML = 'Select One'
@@ -29,8 +33,7 @@ export default function Product(props) {
             setOptionList(o => { return { ...o, selectedOption: newOption } })
         }
     }, []);
-    console.log(optionList.selectedOption)
-
+    
     useEffect(() => {
         if (productData.options) {
             setOptionList(o => {
@@ -62,8 +65,6 @@ export default function Product(props) {
         console.log('incrementing: ', productData.qty - 1)
     }
 
-    console.log(productData.image);
-    console.log(optionList.list);
     return (
         <div className='product-cont' >
 
@@ -90,7 +91,10 @@ export default function Product(props) {
                     <img className='product-option-chev down' src='/assets/svg/down_chev.svg' alt='v' onClick={() => { decrementQty() }} />
                 </div>
                 <div className='product-btn-cont'>
-                    <button className='product-btn' type='button' >Add to Cart</button>
+                    <input className='product-btn' type='button' value='Add to Cart' onClick={() => {
+                        cartDispatch(addToCart({_id:productData._id, qty:productData.qty}));
+                        console.log('added item to cart', cart);
+                    }} />
                 </div>
                 <div className='product-desc-cont'>
                     <p>Description: <span className='product-desc-span'> {productData.description}</span></p>

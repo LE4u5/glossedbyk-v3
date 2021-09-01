@@ -5,13 +5,17 @@ import Home from './Pages/Home/Home';
 import Store from './Pages/Store/Store';
 import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBarComponent';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import SmoothScroll from 'smooth-scroll';
 import Product from './Pages/Product/Product';
 import Checkout from './Pages/Checkout/Checkout';
 import Cart from './Pages/Cart/Cart';
+import { SiteContext } from './data/SiteContext';
+import {fetchProducts} from './data/ActionCreators';
 
 function App() {
+  const [products,productsDispatch,,] = useContext(SiteContext);
+  useEffect(() => { fetchProducts(productsDispatch);}, [productsDispatch]);
   
   new SmoothScroll('a[href*="#"]');
 

@@ -1,12 +1,15 @@
 import './Store.css';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { NavDark } from '../../Components/NavBar/NavBarComponent';
 import ProductCard from '../../Components/ProductCard/ProductCard';
-import { PRODUCTS } from '../../Data/products';
+//import { PRODUCTS } from '../../data/products';
+import { SiteContext } from '../../data/SiteContext';
 
 export default function Store() {
     const [rowSize, setRowSize] = useState(1);
     const [prodList, setProdList] = useState([]);
+    const [products, ,,] = useContext(SiteContext);
+    const PRODUCTS = products.products;
     //Creats row divs and fills them with *n product cards. *n = rowSize
     const createList = useCallback(() => {
         setProdList(new Array(Math.ceil(PRODUCTS.length / rowSize)).fill('').map((v, i) => {
@@ -27,7 +30,7 @@ export default function Store() {
             }
             return <div className='store-row-cont' key={i + 2000}> {newArray} </div>
         }));
-    }, [setProdList, rowSize]);
+    }, [setProdList, rowSize, PRODUCTS]);
     //Calculates row size based on window width
     const calculateRowSize = useCallback(() => {
 
@@ -71,7 +74,7 @@ export default function Store() {
         console.log('Length of products list: ', PRODUCTS.length);
         console.log(`Rows: ${Math.ceil(PRODUCTS.length / rowSize)}. Remainder: ${PRODUCTS.length % rowSize}`)
         createList();
-    }, [rowSize, createList, calculateRowSize]);
+    }, [rowSize, createList, calculateRowSize, PRODUCTS]);
 
     console.log('Row size: ', rowSize);
 

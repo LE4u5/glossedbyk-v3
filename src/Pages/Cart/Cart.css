@@ -10,5 +10,18 @@
     color: #B7884C;
     font-weight: 200;
     font-size: 48pt;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.content-cont{
+    display: flex;
+    width: 100%;
+}
+.cart-prod-cont{
+    width: 50%;
+}
+.cart-summary-cont{
+    width: 50%;
+    display: flex;
+    justify-content: end;
 }

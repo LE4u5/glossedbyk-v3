@@ -33,7 +33,7 @@ export default function Home() {
         }
     }, [toggleNav]);
 
-    const featured = products.map(a => <ProductCard image={a.image}
+    const featured = products.map(a => <ProductCard className='fl-items' image={a.image}
         name={a.name}
         price={a.price.toFixed(2)}
         salePrice={a.salePrice.toFixed(2)}
