@@ -1,18 +1,21 @@
 import './Product.css';
 import React, { useEffect, useState, useCallback, useContext } from 'react';
 //import { PRODUCTS } from '../../data/products';
-import { NavDark } from '../../Components/NavBar/NavBarComponent';
+import { NavDark, NavLight } from '../../Components/NavBar/NavBarComponent';
 import { SiteContext } from '../../data/SiteContext';
 import { addToCart } from '../../data/ActionCreators';
 
 export default function Product(props) {
-    useEffect(() => { NavDark() }, []);
+
     const [products, , cart, cartDispatch] = useContext(SiteContext);
     const PRODUCTS = products.products;
     const [name] = useState(props.match.params.SelectedItem.replace(/_/g, ' '));
     const [optionList, setOptionList] = useState({ list: [], visible: false, selectedOption: '' });
     const [productData, setProductData] = useState({ price: 0, image: '', qty: 1 });
-
+    useEffect(() => {
+        if (window.innerWidth > 500) NavDark();
+        else NavLight();
+    }, []);
     useEffect(() => {
         setProductData(o => {
             return {
@@ -33,7 +36,7 @@ export default function Product(props) {
             setOptionList(o => { return { ...o, selectedOption: newOption } })
         }
     }, []);
-    
+
     useEffect(() => {
         if (productData.options) {
             setOptionList(o => {
@@ -92,7 +95,7 @@ export default function Product(props) {
                 </div>
                 <div className='product-btn-cont'>
                     <input className='product-btn' type='button' value='Add to Cart' onClick={() => {
-                        cartDispatch(addToCart({_id:productData._id, qty:productData.qty}));
+                        cartDispatch(addToCart({ _id: productData._id, qty: productData.qty }));
                         console.log('added item to cart', cart);
                     }} />
                 </div>

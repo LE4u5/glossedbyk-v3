@@ -20,3 +20,33 @@
 .checkout-summary-cont{
     width: 50%;
 }
+.info-cont{
+    margin-right: 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    height: 48px;
+    overflow: hidden;
+}
+.address-header-cont{
+    margin-bottom: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 6px 6px 0px 0px;
+    padding: 10px;
+}
+.address-info-cont input{
+    border: none;
+    margin: 8px 8px;
+    border-radius: 6px;
+    height: 24px;
+    width: 95%;
+    padding: 0 8px;
+    background-color: #FEF2F5;
+}
+.address-info-cont{
+    padding: 10px 20px;
+}
+.info-cont.extend{
+    height: fit-content;
+}

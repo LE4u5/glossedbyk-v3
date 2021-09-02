@@ -25,3 +25,24 @@
     display: flex;
     justify-content: flex-end;
 }
+@media only screen and (max-width:500px){
+    .cart-cont{
+        display: block;
+        padding: 20px;
+        height: fit-content;
+        text-align: center;
+        min-height: fit-content;
+    }
+    .content-cont{
+        display: block;
+        height: fit-content;
+    }
+    .cart-prod-cont{
+        width: 100%;
+        height: fit-content;
+    }
+    .cart-summary-cont{
+        width: 100%;
+        height: fit-content;
+    }
+}

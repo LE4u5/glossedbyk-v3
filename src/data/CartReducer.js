@@ -9,7 +9,7 @@ export default function CartReducer(state, action) {
             cartUpdateQty = state.cart.map(item => {
                 if (item._id === action.payload._id) {
                     _includes = true;
-                    return { ...item, qty: item.qty++ }
+                    return { ...item, qty: item.qty+action.payload.qty }
                 } else return item;
             })
             if (_includes)

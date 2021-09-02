@@ -9,9 +9,10 @@
     padding: .5em;
     display: flex;
 }
-.content-cont{
+.sc-content-cont{
     margin: auto;
     width: 100%;
+    display: block;
 }
 .sc-btn-cont{
     width: 100%;

@@ -142,3 +142,16 @@
     margin-top: 1em;
     cursor: pointer;
 }
+@media only screen and (max-width: 500px) {
+    .product-cont{
+        display: block;
+        padding-top: 3rem;
+    }
+    .product-info-cont{
+        padding: 20px;
+        width: 100%;
+    }
+    .product-image-cont{
+        width: 85vw;
+    }
+}

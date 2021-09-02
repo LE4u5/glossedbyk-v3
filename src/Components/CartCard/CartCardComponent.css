@@ -35,7 +35,6 @@
     padding: 8px 0;
     height: 70%;
     align-content: center;
-    align-items: center;
 }
 .cart-card-col{
     width: 33%;
@@ -43,4 +42,16 @@
     justify-content: flex-start;
     height: fit-content;
     padding-left: 6px;
+}
+
+@media only screen and (max-width:500px) {
+    .cart-card-cont{
+        display: block;
+        height: fit-content;
+        width: 100%;
+        margin: 0px;
+    }
+    .cart-card-img{
+        height: 75px;
+    }
 }
